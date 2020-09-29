@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80A9B6"
+    tools:context=".FirstPage">
+
+    <androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="20dp"
+    android:backgroundTint="@color/design_default_color_secondary_variant"
+    android:id="@+id/ageCard"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textStyle="bold"
+            android:text="Age"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:id="@+id/txtAge"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:text="age below:"
+            android:layout_below="@+id/txtAge"
+            android:layout_marginLeft="20dp"
+            android:textSize="17sp"
+            />
+
+        <com.google.android.material.slider.Slider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/slider"
+            android:layout_below="@+id/txtAge"
+            android:valueFrom="0"
+            android:valueTo="100"
+            android:stepSize="10"
+            android:layout_margin="20dp"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        android:backgroundTint="@color/design_default_color_secondary_variant"
+        android:layout_below="@+id/ageCard"
+        android:id="@+id/heightCard"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textStyle="bold"
+                android:text="Height :"
+                android:layout_centerHorizontal="false"
+                android:textSize="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/txtHeight"
+
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtHeight"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="19sp"
+                android:id="@+id/editHeight"
+                android:paddingStart="10dp"
+                android:layout_centerHorizontal="true"
+                android:hint="(in meters!)"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="meters"
+                android:textStyle="bold"
+                android:layout_marginTop="28dp"
+                android:textSize="19sp"
+                android:layout_toRightOf="@+id/editHeight"
+                android:layout_below="@+id/txtHeight"
+                />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heightCard"
+        android:text="Enter valid height details!"
+        android:id="@+id/txtHeightWarning"
+        android:layout_marginHorizontal="30dp"
+        android:visibility="invisible"
+        android:textColor="@color/design_default_color_error"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        android:backgroundTint="@color/design_default_color_secondary_variant"
+        android:layout_below="@+id/heightCard"
+        android:id="@+id/weightCard"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textStyle="bold"
+                android:text="Weight :"
+                android:layout_centerHorizontal="false"
+                android:layout_marginLeft="30dp"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/txtWeight"
+
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtWeight"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/editWeight"
+                android:textSize="19sp"
+                android:paddingStart="10dp"
+                android:layout_centerHorizontal="true"
+                android:hint="(in KG's!)"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KG's"
+                android:textStyle="bold"
+                android:layout_marginTop="28dp"
+                android:textSize="19sp"
+                android:layout_toRightOf="@+id/editWeight"
+                android:layout_below="@+id/txtWeight"
+                />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weightCard"
+        android:text="Enter valid weight details!"
+        android:id="@+id/txtWeightWarning"
+        android:layout_marginHorizontal="30dp"
+        android:visibility="invisible"
+        android:textColor="@color/design_default_color_error"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI: will be calculated here"
+        android:id="@+id/txtBmi"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtWeightWarning"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBmi"
+        android:layout_marginHorizontal="20dp"
+        android:text="Calculate"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btnCal"
+        android:backgroundTint="#4F856B"
+        android:textStyle="bold"
+        />
+
+
+</RelativeLayout>
